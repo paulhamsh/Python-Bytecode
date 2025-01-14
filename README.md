@@ -82,6 +82,8 @@ def print_hello():
 ```python
 import dis
 dis.dis(print_hello)
+```
+```python
 
   2           0 LOAD_GLOBAL              0 (print)
               2 LOAD_CONST               1 ('Hello')
