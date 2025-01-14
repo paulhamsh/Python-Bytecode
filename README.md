@@ -107,13 +107,15 @@ Names:
 ```
 
 Within CPython each function has a code object, which is accessible as `.__code__.`    
+This has multiple attributes, the key one being the actual `bytearray` of the bytecode.    
 
 ```python
 print(list(print_hello.__code__.co_code))
 
 [116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
-
 ```
+
+
 
 ## Running some bytecode
 
@@ -149,3 +151,51 @@ my_print_hello()
 
 ```
 
+## Getting the attributes of a code block
+
+```python
+help(type(((lambda:0).__code__)))
+
+class code(object)
+ |  code(argcount,
+    posonlyargcount,
+    kwonlyargcount,
+    nlocals,
+    stacksize,
+    flags,
+    codestring,
+    constants,
+    names,
+    varnames,
+    filename,
+    name,
+    firstlineno,
+    linetable,
+    freevars=(),
+    cellvars=(),
+     /)
+ |  
+ |  Create a code object.  Not for the faint of heart.
+ |  
+ ....
+ |
+ |  Data descriptors defined here:
+ |  co_argcount
+ |  co_cellvars
+ |  co_code
+ |  co_consts
+ |  co_filename
+ |  co_firstlineno
+ |  co_flags
+ |  co_freevars
+ |  co_kwonlyargcount
+ |  co_linetable
+ |  co_lnotab
+ |  co_name
+ |  co_names
+ |  co_nlocals
+ |  co_posonlyargcount
+ |  co_stacksize
+ |  co_varnames
+
+```
