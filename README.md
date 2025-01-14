@@ -12,7 +12,7 @@ Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmac
 ### Websites
 
 #### Python innards series
----------------------
+```
 https://tech.blog.aknin.name/category/my-projects/pythons-innards/
 https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/
 https://tech.blog.aknin.name/2010/05/12/pythons-innards-objects-101/
@@ -24,9 +24,10 @@ https://tech.blog.aknin.name/2010/07/03/pythons-innards-code-objects/
 https://tech.blog.aknin.name/2010/07/04/pythons-innards-for-my-wife/
 https://tech.blog.aknin.name/2010/07/22/pythons-innards-interpreter-stacks/
 https://tech.blog.aknin.name/2010/09/02/pythons-innards-hello-ceval-c-2/
+```
 
-Python behind the scenes
-------------------------
+#### Python behind the scenes
+```
 https://tenthousandmeters.com/tag/python-behind-the-scenes/
 https://tenthousandmeters.com/blog/python-behind-the-scenes-1-how-the-cpython-vm-works/
 https://tenthousandmeters.com/blog/python-behind-the-scenes-2-how-the-cpython-compiler-works/
@@ -41,6 +42,7 @@ https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictio
 https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/
 https://tenthousandmeters.com/blog/python-behind-the-scenes-12-how-asyncawait-works-in-python/
 https://tenthousandmeters.com/blog/python-behind-the-scenes-13-the-gil-and-its-effects-on-python-multithreading/
+```
 
 Bytecode 
 --------
