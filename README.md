@@ -156,7 +156,7 @@ my_print_hello = FunctionType(my_code, {})
 my_print_hello()
 ```
 
-## Getting the attributes of a code block
+### Getting the attributes of a code block
 
 ```python
 help(type(((lambda:0).__code__)))
@@ -205,7 +205,8 @@ class code(object)
  |  co_varnames
 ```
 
-Printing the attributes for a real object
+### Printing the attributes for a real object
+
 ```python
 def obj():
     print("Hello")
@@ -240,7 +241,7 @@ co_varnames                   : ()
 co_lines                      : (0, 12, 18)
 ```
 
-
+### Listing the bytecode mnemonics and bytecode values
 ```python
 import dis
 dis.HAVE_ARGUMENT
