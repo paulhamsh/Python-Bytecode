@@ -210,7 +210,7 @@ def obj():
 import inspect
 for name, value in inspect.getmembers(obj):
     if name.startswith('co_') and name is not 'co_lines':
-        print(f"{name}: {value}")
+        print(f"{name:30}: {value}")
 
 for i in  obj.__code__.co_lines():
     print(i)
