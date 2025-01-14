@@ -116,7 +116,8 @@ This has multiple attributes, the key one being the actual `bytearray` of the by
 
 ```python
 print(list(print_hello.__code__.co_code))
-
+```
+```python
 [116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
 ```
 
@@ -153,14 +154,14 @@ my_code = CodeType (
 
 my_print_hello = FunctionType(my_code, {})
 my_print_hello()
-
 ```
 
 ## Getting the attributes of a code block
 
 ```python
 help(type(((lambda:0).__code__)))
-
+```
+```python
 class code(object)
  |  code(argcount,
     posonlyargcount,
@@ -202,16 +203,14 @@ class code(object)
  |  co_posonlyargcount
  |  co_stacksize
  |  co_varnames
-
 ```
 
 Printing the attributes for a real object
 ```python
-
 def obj():
     print("Hello")
-
-
+```
+```python
 import inspect
 for name, value in inspect.getmembers(obj):
     if name.startswith('co_') and name is not 'co_lines':
@@ -219,25 +218,24 @@ for name, value in inspect.getmembers(obj):
 
 for i in  obj.__code__.co_lines():
     print(i)
-
-
-co_argcount: 0
-co_cellvars: ()
-co_code: b't\x00d\x01\x83\x01\x01\x00d\x00S\x00'
-co_consts: (None, 'Hello')
-co_filename: D:/OneDrive/Documents/Desktop/test.py
-co_firstlineno: 17
-co_flags: 67
-co_freevars: ()
-co_kwonlyargcount: 0
-co_linetable: b'\x0c\x01'
-co_lnotab: b'\x00\x01'
-co_name: obj
-co_names: ('print',)
-co_nlocals: 0
-co_posonlyargcount: 0
-co_stacksize: 2
-co_varnames: ()
+```
+```python
+co_argcount                   : 0
+co_cellvars                   : ()
+co_code                       : b't\x00d\x01\x83\x01\x01\x00d\x00S\x00'
+co_consts                     : (None, 'Hello')
+co_filename                   : D:/OneDrive/Documents/Desktop/test.py
+co_firstlineno                : 17
+co_flags                      : 67
+co_freevars                   : ()
+co_kwonlyargcount             : 0
+co_linetable                  : b'\x0c\x01'
+co_lnotab                     : b'\x00\x01'
+co_name                       : obj
+co_names                      : ('print',)
+co_nlocals                    : 0
+co_posonlyargcount            : 0
+co_stacksize                  : 2
+co_varnames                   : ()
 (0, 12, 18)
-
 ```
