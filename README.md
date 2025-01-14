@@ -4,7 +4,7 @@ Documentation about Python bytecode
 ## A note on Python versions
 
 Most of the examples here use python 3.10.8.   
-From 3.11 the format of bytecode really changes - there are new CACHE spaces in the bytecode and other performance improvements. This is an added complexity which make learning the actual bytecode harder, so is avoided for most of this discussion. The relevant PEP is https://peps.python.org/pep-0659/    
+From 3.11 the format of bytecode really changes - there are new CACHE spaces in the bytecode and other performance improvements. This is an added complexity which make learning the actual bytecode harder, so is avoided for most of this discussion. The relevant PEP is PEP 659 – Specializing Adaptive Interpreter (https://peps.python.org/pep-0659/)    
 
 ## Useful links for information
 
