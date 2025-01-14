@@ -116,7 +116,7 @@ print(list(print_hello.__code__.co_code))
 Bytecode needs a context to run in - the 'frame' - which has all the correct constants, names and variables.   
 From this we can create a function, which can be run.   
 
-```
+```python
 from types import FunctionType, CodeType
 from dis import COMPILER_FLAG_NAMES
 
