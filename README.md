@@ -5,7 +5,7 @@ Documentation about Python bytecode
 
 ### Books
 
-CPython Internals Book
+CPython Internals Book  (https://realpython.com/products/cpython-internals-book/)
 Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmachine/read)
 
 
@@ -49,8 +49,9 @@ https://tenthousandmeters.com/blog/python-behind-the-scenes-13-the-gil-and-its-e
 https://bytecode.readthedocs.io/en/latest/index.html    
 https://github.com/MatthieuDartiailh/bytecode    
 
-#### dis
+#### Python documents
 
+https://github.com/python/cpython/tree/main/InternalDocs
 https://docs.python.org/3.4/library/dis.html    
 
 
