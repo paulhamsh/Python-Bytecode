@@ -12,7 +12,7 @@ Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmac
 ### Websites
 
 #### Python innards series
-```
+
 https://tech.blog.aknin.name/category/my-projects/pythons-innards/
 https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/
 https://tech.blog.aknin.name/2010/05/12/pythons-innards-objects-101/
@@ -24,7 +24,7 @@ https://tech.blog.aknin.name/2010/07/03/pythons-innards-code-objects/
 https://tech.blog.aknin.name/2010/07/04/pythons-innards-for-my-wife/
 https://tech.blog.aknin.name/2010/07/22/pythons-innards-interpreter-stacks/
 https://tech.blog.aknin.name/2010/09/02/pythons-innards-hello-ceval-c-2/
-```
+
 
 #### Python behind the scenes
 ```
