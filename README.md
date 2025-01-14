@@ -224,7 +224,7 @@ co_argcount                   : 0
 co_cellvars                   : ()
 co_code                       : b't\x00d\x01\x83\x01\x01\x00d\x00S\x00'
 co_consts                     : (None, 'Hello')
-co_filename                   : D:/OneDrive/Documents/Desktop/test.py
+co_filename                   : test.py
 co_firstlineno                : 17
 co_flags                      : 67
 co_freevars                   : ()
