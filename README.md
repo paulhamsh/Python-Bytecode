@@ -104,7 +104,11 @@ Constants:
    1: 'Hello'
 Names:
    0: print
+```
 
+Within CPython each function has a code object, which is accessible as `.__code__.`    
+
+```python
 print(list(print_hello.__code__.co_code))
 
 [116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
