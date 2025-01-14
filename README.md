@@ -11,8 +11,7 @@ Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmac
 
 ### Websites
 
-```
-Python innards series
+#### Python innards series
 ---------------------
 https://tech.blog.aknin.name/category/my-projects/pythons-innards/
 https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/
