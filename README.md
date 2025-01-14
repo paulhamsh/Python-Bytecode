@@ -5,8 +5,8 @@ Documentation about Python bytecode
 
 ### Books
 
-CPython Internals Book  (https://realpython.com/products/cpython-internals-book/)
-Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmachine/read)
+CPython Internals Book  (https://realpython.com/products/cpython-internals-book/)    
+Inside The Python Virtual Machine (https://leanpub.com/insidethepythonvirtualmachine/read)    
 
 
 ### Websites
