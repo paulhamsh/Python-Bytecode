@@ -199,3 +199,40 @@ class code(object)
  |  co_varnames
 
 ```
+
+Printing the attributes for a real object
+```python
+
+def obj():
+    print("Hello")
+
+
+import inspect
+for name, value in inspect.getmembers(obj):
+    if name.startswith('co_') and name is not 'co_lines':
+        print(f"{name}: {value}")
+
+for i in  obj.__code__.co_lines():
+    print(i)
+
+
+co_argcount: 0
+co_cellvars: ()
+co_code: b't\x00d\x01\x83\x01\x01\x00d\x00S\x00'
+co_consts: (None, 'Hello')
+co_filename: D:/OneDrive/Documents/Desktop/test.py
+co_firstlineno: 17
+co_flags: 67
+co_freevars: ()
+co_kwonlyargcount: 0
+co_linetable: b'\x0c\x01'
+co_lnotab: b'\x00\x01'
+co_name: obj
+co_names: ('print',)
+co_nlocals: 0
+co_posonlyargcount: 0
+co_stacksize: 2
+co_varnames: ()
+(0, 12, 18)
+
+```
