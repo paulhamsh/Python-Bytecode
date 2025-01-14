@@ -27,7 +27,7 @@ https://tech.blog.aknin.name/2010/09/02/pythons-innards-hello-ceval-c-2/
 
 
 #### Python behind the scenes
-```
+
 https://tenthousandmeters.com/tag/python-behind-the-scenes/    
 https://tenthousandmeters.com/blog/python-behind-the-scenes-1-how-the-cpython-vm-works/    
 https://tenthousandmeters.com/blog/python-behind-the-scenes-2-how-the-cpython-compiler-works/    
@@ -42,18 +42,17 @@ https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictio
 https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/    
 https://tenthousandmeters.com/blog/python-behind-the-scenes-12-how-asyncawait-works-in-python/    
 https://tenthousandmeters.com/blog/python-behind-the-scenes-13-the-gil-and-its-effects-on-python-multithreading/    
-```
 
-Bytecode 
---------
+
+#### Bytecode 
+
 https://bytecode.readthedocs.io/en/latest/index.html    
 https://github.com/MatthieuDartiailh/bytecode    
 
-dis
----
+#### dis
+
 https://docs.python.org/3.4/library/dis.html    
 
-```
 
 ## How to run different versions of Python
 
