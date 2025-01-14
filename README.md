@@ -70,16 +70,78 @@ py -3.10
 py -3.13
 ```
 
+
+## Geting some bytecode
+
+A good place to start is with a function you create and the ```dis``` module.   
+
+```
+def print_hello():
+    print("Hello")
+
+import dis
+dis.dis(print_hello)
+
+  2           0 LOAD_GLOBAL              0 (print)
+              2 LOAD_CONST               1 ('Hello')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+              8 LOAD_CONST               0 (None)
+             10 RETURN_VALUE
+
+print(dis.code_info(print_hello))
+
+Name:              print_hello
+Filename:          <pyshell#8>
+Argument count:    0
+Positional-only arguments: 0
+Kw-only arguments: 0
+Number of locals:  0
+Stack size:        2
+Flags:             OPTIMIZED, NEWLOCALS, NOFREE
+Constants:
+   0: None
+   1: 'Hello'
+Names:
+   0: print
+
+print(list(print_hello.__code__.co_code))
+
+[116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
+
+```
+
 ## Running some bytecode
 
 Bytecode needs a context to run in - the 'frame' - which has all the correct constants, names and variables.   
 From this we can create a function, which can be run.   
 
 ```
+from types import FunctionType, CodeType
+from dis import COMPILER_FLAG_NAMES
 
+my_code = CodeType (
+    0,                   # argcount
+    0,                   # posonlyargcount
+    0,                   # kwonlyargcount
+    0,                   # nlocals
+    3,                   # stacksize
+    0x43,                # flags CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE
 
+    bytes([116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]),  # codestring
+    (None, 'Hello'),     # constants
+    ('print',),          # names - of constants or global
+    (),                  # varnames - variable names 
+    'no_file',           # filename
+    'my_print_hello',    # name (code name / function)
+     1,                  # firstlineno (First line where this code appears)
+     b'',                # linetable
+     (),                 # freevars
+     ()                  # cellvars
+    )
 
-
+my_print_hello = FunctionType(my_code, {})
+my_print_hello()
 
 ```
 
