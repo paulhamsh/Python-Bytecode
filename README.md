@@ -244,8 +244,6 @@ co_lines                      : (0, 12, 18)
 ### Simple assembler
 
 ```python
-
-code = (('RESUME',0), ('LOAD_FAST', 0), ('LOAD_FAST', 1), ('BINARY_OP', 0), ('CACHE', 0), ('RETURN_VALUE', 0))
 code = (('LOAD_GLOBAL',0), ('LOAD_CONST', 1), ('CALL_FUNCTION', 1), ('POP_TOP', 0), ('LOAD_CONST', 0), ('RETURN_VALUE', 0))
 
 import dis
