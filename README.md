@@ -58,7 +58,7 @@ https://github.com/MatthieuDartiailh/bytecode
 
 https://github.com/python/cpython/tree/main/InternalDocs
 https://docs.python.org/3.4/library/dis.html    
-
+https://docs.python.org/3/reference/datamodel.html
 
 ## How to run different versions of Python
 
