@@ -78,7 +78,8 @@ A good place to start is with a function you create and the ```dis``` module.
 ```python
 def print_hello():
     print("Hello")
-
+```
+```python
 import dis
 dis.dis(print_hello)
 
@@ -88,9 +89,11 @@ dis.dis(print_hello)
               6 POP_TOP
               8 LOAD_CONST               0 (None)
              10 RETURN_VALUE
-
+```
+```python
 print(dis.code_info(print_hello))
-
+```
+```python
 Name:              print_hello
 Filename:          <pyshell#8>
 Argument count:    0
