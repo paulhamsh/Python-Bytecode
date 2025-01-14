@@ -241,6 +241,29 @@ co_varnames                   : ()
 co_lines                      : (0, 12, 18)
 ```
 
+### Simple assembler
+
+```python
+
+code = (('RESUME',0), ('LOAD_FAST', 0), ('LOAD_FAST', 1), ('BINARY_OP', 0), ('CACHE', 0), ('RETURN_VALUE', 0))
+code = (('LOAD_GLOBAL',0), ('LOAD_CONST', 1), ('CALL_FUNCTION', 1), ('POP_TOP', 0), ('LOAD_CONST', 0), ('RETURN_VALUE', 0))
+
+import dis
+def assemble(code):
+    bytecode = []
+    for inst in code:
+        opcode = dis.opmap[inst[0]]
+        bytecode.append(opcode)
+        for arg in inst[1:]:
+            bytecode.append(arg)
+    return (bytecode)
+
+print(assemble(code))
+```
+```python
+[116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
+```
+
 ### Listing the bytecode mnemonics and bytecode values
 ```python
 import dis
