@@ -217,7 +217,7 @@ for name, value in inspect.getmembers(obj):
         print(f"{name:30}: {value}")
 
 for i in  obj.__code__.co_lines():
-    print(i)
+    print(f"{'co_lines':30}: {i}")
 ```
 ```python
 co_argcount                   : 0
@@ -237,5 +237,5 @@ co_nlocals                    : 0
 co_posonlyargcount            : 0
 co_stacksize                  : 2
 co_varnames                   : ()
-(0, 12, 18)
+co_lines                      : (0, 12, 18)
 ```
