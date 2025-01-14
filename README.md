@@ -75,7 +75,7 @@ py -3.13
 
 A good place to start is with a function you create and the ```dis``` module.   
 
-```
+```python
 def print_hello():
     print("Hello")
 
