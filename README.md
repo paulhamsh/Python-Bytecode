@@ -286,28 +286,25 @@ def disassemble_nice(code, varnames, names, consts):
         dis_val.append((dis.opname[op_code], arg, text))
     return tuple(dis_val)
 
-bytecode = [100, 1, 125, 0, 100, 2, 125, 1, 124, 0, 124, 1, 23, 0, 125, 2, 124, 2, 83, 0]
+bytecode = [116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
 print(disassemble(bytecode))
-print(disassemble_nice(bytecode, ('a','b','c'), (), (None,1,2)))
+print(disassemble_nice(bytecode, (), ('print'), (None, 'Hello')))
 ```
 
 ```
-(('LOAD_CONST', 1), ('STORE_FAST', 0),
-('LOAD_CONST', 2), ('STORE_FAST', 1),
-('LOAD_FAST', 0),
-('LOAD_FAST', 1),
-('BINARY_ADD', 0),
-('STORE_FAST', 2),
-('LOAD_FAST', 2),
+(('LOAD_GLOBAL', 0),
+('LOAD_CONST', 1),
+('CALL_FUNCTION', 1),
+('POP_TOP', 0),
+('LOAD_CONST', 0),
 ('RETURN_VALUE', 0))
-
-(('LOAD_CONST', 1, 1), ('STORE_FAST', 0, 'a'),
-('LOAD_CONST', 2, 2), ('STORE_FAST', 1, 'b'),
-('LOAD_FAST', 0, 'a'),
-('LOAD_FAST', 1, 'b'),
-('BINARY_ADD', 0, ''),
-('STORE_FAST', 2, 'c'),
-('LOAD_FAST', 2, 'c'),
+```
+```
+(('LOAD_GLOBAL', 0, 'p'),
+('LOAD_CONST', 1, 'Hello'),
+('CALL_FUNCTION', 1, ''),
+('POP_TOP', 0, ''),
+('LOAD_CONST', 0, None),
 ('RETURN_VALUE', 0, ''))
 ```
 
