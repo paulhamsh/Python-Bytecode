@@ -292,9 +292,23 @@ print(disassemble_nice(bytecode, ('a','b','c'), (), (None,1,2)))
 ```
 
 ```
-(('LOAD_CONST', 1), ('STORE_FAST', 0), ('LOAD_CONST', 2), ('STORE_FAST', 1), ('LOAD_FAST', 0), ('LOAD_FAST', 1), ('BINARY_ADD', 0), ('STORE_FAST', 2), ('LOAD_FAST', 2), ('RETURN_VALUE', 0))
+(('LOAD_CONST', 1), ('STORE_FAST', 0),
+('LOAD_CONST', 2), ('STORE_FAST', 1),
+('LOAD_FAST', 0),
+('LOAD_FAST', 1),
+('BINARY_ADD', 0),
+('STORE_FAST', 2),
+('LOAD_FAST', 2),
+('RETURN_VALUE', 0))
 
-(('LOAD_CONST', 1, 1), ('STORE_FAST', 0, 'a'), ('LOAD_CONST', 2, 2), ('STORE_FAST', 1, 'b'), ('LOAD_FAST', 0, 'a'), ('LOAD_FAST', 1, 'b'), ('BINARY_ADD', 0, ''), ('STORE_FAST', 2, 'c'), ('LOAD_FAST', 2, 'c'), ('RETURN_VALUE', 0, ''))
+(('LOAD_CONST', 1, 1), ('STORE_FAST', 0, 'a'),
+('LOAD_CONST', 2, 2), ('STORE_FAST', 1, 'b'),
+('LOAD_FAST', 0, 'a'),
+('LOAD_FAST', 1, 'b'),
+('BINARY_ADD', 0, ''),
+('STORE_FAST', 2, 'c'),
+('LOAD_FAST', 2, 'c'),
+('RETURN_VALUE', 0, ''))
 ```
 
 ### Listing the bytecode mnemonics and bytecode values
