@@ -262,6 +262,34 @@ print(assemble(code))
 [116, 0, 100, 1, 131, 1, 1, 0, 100, 0, 83, 0]
 ```
 
+### Simple disassembler
+
+```
+def disassemble(code):
+    dis_val = []
+    for op_code, arg in zip(code[::2], code[1::2]):
+        dis_val.append((dis.opname[op_code], arg))
+    return tuple(dis_val)
+
+def disassemble_nice(code, varnames, names, consts):
+    dis_val = []
+    for op_code, arg in zip(code[::2], code[1::2]):
+        op_name = dis.opname[op_code]
+        if op_name in ('LOAD_CONST', 'STORE_CONST'):
+            text = consts[arg]
+        elif op_name in ('LOAD_FAST', 'STORE_FAST'):
+            text = varnames[arg]
+        elif op_name in ('LOAD_GLOBAL', 'STORE_GLOBAL'):
+            text = names[arg]
+        else:
+                text = ''
+        dis_val.append((dis.opname[op_code], arg, text))
+    return tuple(dis_val)
+
+print(disassemble(bytecode))
+print(disassemble_nice(bytecode, ('a','b','c'), (), (None,1,2)))
+```
+
 ### Listing the bytecode mnemonics and bytecode values
 ```python
 import dis
