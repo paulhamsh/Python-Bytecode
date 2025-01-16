@@ -286,8 +286,15 @@ def disassemble_nice(code, varnames, names, consts):
         dis_val.append((dis.opname[op_code], arg, text))
     return tuple(dis_val)
 
+bytecode = [100, 1, 125, 0, 100, 2, 125, 1, 124, 0, 124, 1, 23, 0, 125, 2, 124, 2, 83, 0]
 print(disassemble(bytecode))
 print(disassemble_nice(bytecode, ('a','b','c'), (), (None,1,2)))
+```
+
+```
+(('LOAD_CONST', 1), ('STORE_FAST', 0), ('LOAD_CONST', 2), ('STORE_FAST', 1), ('LOAD_FAST', 0), ('LOAD_FAST', 1), ('BINARY_ADD', 0), ('STORE_FAST', 2), ('LOAD_FAST', 2), ('RETURN_VALUE', 0))
+
+(('LOAD_CONST', 1, 1), ('STORE_FAST', 0, 'a'), ('LOAD_CONST', 2, 2), ('STORE_FAST', 1, 'b'), ('LOAD_FAST', 0, 'a'), ('LOAD_FAST', 1, 'b'), ('BINARY_ADD', 0, ''), ('STORE_FAST', 2, 'c'), ('LOAD_FAST', 2, 'c'), ('RETURN_VALUE', 0, ''))
 ```
 
 ### Listing the bytecode mnemonics and bytecode values
