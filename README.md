@@ -347,7 +347,7 @@ dis.opmap
 'LOAD_METHOD': 160, 'CALL_METHOD': 161, 'LIST_EXTEND': 162, 'SET_UPDATE': 163, 'DICT_MERGE': 164, 'DICT_UPDATE': 165}
 ```
 
-### Basic assembler and disassembler
+### Basic assembler and disassembler examples
 ```python
 import dis
 
